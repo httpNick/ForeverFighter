@@ -1,0 +1,24 @@
+{
+  "name": "johnnyraine-foreverfighter",
+  "version": "0.1.4",
+  "description": "Web app for Andi's Movie",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "~4.9.x"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "forever fighter",
+    "Angular"
+  ],
+  "license": "MIT"
+}
