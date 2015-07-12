@@ -23,16 +23,16 @@ div.px-font {
 
 @media (min-width: @screen-sm-min) {
     .main-row { 
-        position: absolute; 
+        position: relative; 
     }
     .ribbon { 
         position: absolute;
-        top: 100px;
+        top: 80px;
     }
     .ribbon.left { left: 0px; }
     .ribbon.right { right: 0px; }
     .ribbon img {
         /* Resize your images here to fit as you'd like them. */
-        height: 10px;
-        width: 10px; 
+        height: 300px;
+        width: 400px; 
     }
