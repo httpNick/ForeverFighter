@@ -22,22 +22,33 @@
     	 <a class="navbar-brand" href="#/home">Forever Fighter</a>
     	</div>
     <ul class="nav navbar-nav">
-    <li><a href="#">Cast</a></li>
-    <li><a href="#">Updates</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#/cast">Cast</a></li>
+    <li><a href="#/updates">Updates</a></li>
+    <li><a href="#/contact">Contact</a></li>
 </ul>
 </div>
 </nav>
 
 <body>
+      	<ui-view></ui-view>
+</body>
+
+<script type="text/ng-template" id="/home.html">
  
 <div class="jumbotron text-center">
   <h1>Welcome</h1>
-  <p>This is the foundation of the official website for Johnny Rayne's upcoming
+  <p>This is the foundation of the official website for Johnny Raynes upcoming
   	feature film <b>"Forever Fighter"</b>
   </p>
   <p><a class="btn btn-primary btn-lg">Future link to Kickstarter</a></p>
 </div>
 
-</body>
+</script>
+
+<script type="text/ng-template" id="/updates.html">
+	<div class="jumbotron text-center">
+		<h1>{{text}}</h1>
+	</div>	
+</script>
+
 </html>
