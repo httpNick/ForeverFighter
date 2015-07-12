@@ -5,6 +5,11 @@ app.controller('UpdateCtrl', ['$scope', 'updates',
 		$scope.text = updates.text;
 	}]);
 
+app.controller('MainCtrl', ['$scope', 'bio',
+	function($scope, bio) {
+		$scope.frontpagebio = bio.frontpagebio;
+	}]);
+
 app.factory('updates', ['$http', function($http) {
 
 	var o = {
@@ -19,6 +24,21 @@ app.factory('updates', ['$http', function($http) {
 	return o;
 }]);
 
+app.factory('bio', ['$http', function($http) {
+
+	var o = {
+		frontpagebio : ""
+	}
+
+	o.getFrontPageBio = function() {
+		console.log("got to get request");
+		return $http.get('/bio').success(function(data) {
+			o.frontpagebio = data;
+		});
+	}
+	return o;
+}]);
+
 app.config([
 	'$stateProvider',
 	'$urlRouterProvider',
@@ -27,7 +47,19 @@ app.config([
 		$stateProvider
 		.state('home', {
 			url: '/home',
-			templateUrl: '/home.html'
+			templateUrl: '/home.html',
+			controller: 'MainCtrl',
+			resolve: {
+				bioPromise : ['bio', function(bio) {
+					return bio.getFrontPageBio();
+				}]
+			}
+		});
+
+		$stateProvider
+		.state('about', {
+			url: '/about',
+			templateUrl: '/about.html',
 		});
 
 		$stateProvider
