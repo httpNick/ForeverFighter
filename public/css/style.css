@@ -29,8 +29,8 @@ div.px-font {
         position: absolute;
         top: 80px;
     }
-    .ribbon.left { left: 0px; }
-    .ribbon.right { right: 0px; }
+    .ribbon.left { left: 100px; }
+    .ribbon.right { right: 100px; }
     .ribbon img {
         /* Resize your images here to fit as you'd like them. */
         height: 300px;
