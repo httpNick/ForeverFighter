@@ -3,7 +3,7 @@ var router = express.Router();
 var pg = require('pg');
 
 //console.log(process.env.DATABASE_URL);
-router.get('/db', function (request, response) {
+router.get('/db', function (req, res, next) {
 	pg.connect(process.env.DATABASE_URL, function(err, client) {
 	  var query = client.query('SELECT * FROM test_table');
 
