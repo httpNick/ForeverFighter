@@ -31,12 +31,17 @@ app.factory('bio', ['$http', function($http) {
 	}
 
 	o.getFrontPageBio = function() {
-		console.log("got to get request");
 		return $http.get('/bio').success(function(data) {
-			o.frontpagebio = data;
+			o.frontpagebio = data[0];
 		});
 	}
 	return o;
+}]);
+
+app.filter("sanitize", ['$sce', function($sce) {
+  return function(htmlCode){
+    return $sce.trustAsHtml(htmlCode);
+  }
 }]);
 
 app.config([
@@ -48,18 +53,18 @@ app.config([
 		.state('home', {
 			url: '/home',
 			templateUrl: '/home.html',
-			controller: 'MainCtrl',
-			resolve: {
-				bioPromise : ['bio', function(bio) {
-					return bio.getFrontPageBio();
-				}]
-			}
 		});
 
 		$stateProvider
 		.state('about', {
 			url: '/about',
 			templateUrl: '/about.html',
+			controller: 'MainCtrl',
+			resolve: {
+				bioPromise : ['bio', function(bio) {
+					return bio.getFrontPageBio();
+				}]
+			}
 		});
 
 		$stateProvider
