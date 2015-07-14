@@ -35,22 +35,3 @@
 div.px-font {
   font-size: 110px;
 }
-
-@media (min-width: @screen-sm-min) {
-    .main-row { 
-        position: relative; 
-    }
-    div.px-font {
-    	font-size: 50px;
-    }
-    .ribbon { 
-        position: absolute;
-        top: 80px;
-    }
-    .ribbon.left { left: 100px; }
-    .ribbon.right { right: 100px; }
-    .ribbon img {
-        /* Resize your images here to fit as you'd like them. */
-        height: 300px;
-        width: 400px; 
-    }
