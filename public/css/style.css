@@ -13,6 +13,7 @@
 	margin-right: 0px;
     position: relative;
     background: #000 url("/images/polygon-pattern.jpg") center center;
+    background-attachment: fixed;
     width: 100%;
     height: 100%;
     overflow: hidden;
