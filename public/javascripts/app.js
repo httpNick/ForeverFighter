@@ -10,6 +10,26 @@ app.controller('MainCtrl', ['$scope', 'bio',
 		$scope.frontpagebio = bio.frontpagebio;
 	}]);
 
+app.controller('StoryCtrl', ['$scope', 'story',
+	function($scope, story) {
+		$scope.story = story.text;
+	}]);
+
+app.factory('story', ['$http', function($http) {
+
+	var o = {
+		text: ""
+	}
+
+	o.getStory = function() {
+		return $http.get('/storydata').success(function(data) {
+			o.text = data;
+		});
+	}
+
+	return o;
+}])
+
 app.factory('cast', ['$http', function($http) {
 
 	var o = {
@@ -86,9 +106,21 @@ app.config([
 		});
 
 		$stateProvider
+		.state('story', {
+			url: '/story',
+			templateUrl: '/story.html',
+			controller: 'StoryCtrl',
+			resolve: {
+				storyPromise : ['story', function(story) {
+					return story.getStory();
+				}]
+			}
+		})
+
+		$stateProvider
 		.state('trailer', {
 			url: '/trailer',
-			templateUrl: '/trailer.html',
+			templateUrl: '/trailer.html'
 
 		});
 

@@ -48,4 +48,11 @@ router.get('/bio', function(req, res, next) {
 	})
 });
 
+router.get('/storydata', function(req, res, next) {
+	var filePath = path.join(__dirname, 'story.txt');
+	async.map([filePath], getFileData, function(err, results) {
+		res.json(results);
+	})
+})
+
 module.exports = router;
