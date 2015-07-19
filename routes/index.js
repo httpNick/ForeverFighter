@@ -5,6 +5,8 @@ var fs = require('fs');
 var async = require('async');
 var path = require('path');
 
+var castbiodata;
+
 var getFileData = function(filename, doneCallback) {
 	fs.readFile(filename, "utf8", function(err, data) {
        if (err) {
@@ -15,15 +17,26 @@ var getFileData = function(filename, doneCallback) {
     });
 }
 
-router.get('/db', function (req, res, next) {
-	pg.connect(process.env.DATABASE_URL, function(err, client) {
-	  var query = client.query('SELECT * FROM test_table');
+var getCastBios = function(castobject, doneCallback) {
+	var file = path.join(__dirname, castobject.bio);
+	fs.readFile(file, "utf8", function(err, data) {
+		if (err) {
+			return err;
+		} else {
+			castobject.biotext = data;
+			return doneCallback(null, castobject);
+		}
+	})
+}
 
-	  query.on('row', function(row) {
-	    console.log(JSON.stringify(row));
-	    res.json(JSON.stringify(row));
-	  });
-	}); 
+router.get('/castdata/:data', function(req, res, next) {
+	castbiodata = JSON.parse(req.params.data);
+	async.map(castbiodata, getCastBios, function(err, results) {
+		for(x = 0; x < castbiodata.length; x++) {
+			castbiodata[x] = results[x]; 
+		}
+		res.json(castbiodata);
+	})
 });
 
 router.get('/bio', function(req, res, next) {

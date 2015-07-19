@@ -1,8 +1,8 @@
 var app = angular.module('foreverFighter', ['ui.router']);
 
-app.controller('UpdateCtrl', ['$scope', 'updates',
-	function($scope, updates) {
-		$scope.text = updates.text;
+app.controller('CastCtrl', ['$scope', 'cast',
+	function($scope, cast) {
+		$scope.castdata = cast.people;
 	}]);
 
 app.controller('MainCtrl', ['$scope', 'bio',
@@ -10,15 +10,33 @@ app.controller('MainCtrl', ['$scope', 'bio',
 		$scope.frontpagebio = bio.frontpagebio;
 	}]);
 
-app.factory('updates', ['$http', function($http) {
+app.factory('cast', ['$http', function($http) {
 
 	var o = {
-		text : ""
+		people: [{name: "Tiffany Nicole Thomas",
+					role: "Annie",
+					bio: "tiffanybio.txt",
+					picture: "tiffany.jpg",
+					biotext: "",
+					height: 300},
+				{name: "Leland Bucahnon",
+					role: "Mike",
+					bio: "lelandbio.txt",
+					picture: "leland.jpg",
+					biotext: "",
+					height: 300},
+				{name: "Ed Stone",
+					role: "Tony",
+					bio: "edbio.txt",
+					picture: "ed.jpg",
+					biotext: "",
+					height: 350}],
+		cached : false
 	}
 
-	o.getUpdates = function() {
-		return $http.get('/db').success(function(data) {
-			o.text = data;
+	o.getData = function() {
+		return $http.get('/castdata/'+JSON.stringify(o.people)).success(function(data) {
+			o.people = data;
 		});
 	}
 	return o;
@@ -72,6 +90,23 @@ app.config([
 			url: '/trailer',
 			templateUrl: '/trailer.html',
 
+		});
+
+		$stateProvider
+		.state('cast', {
+			url: '/cast',
+			templateUrl: '/cast.html',
+			controller: 'CastCtrl',
+			resolve: {
+				castPromise : ['cast', function(cast) {
+					if (!cast.cached) {
+						cast.cached = true;
+						return cast.getData();
+					} else {
+						return;
+					}
+				}]
+			}
 		});
 
 		$urlRouterProvider.otherwise('home');
