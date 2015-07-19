@@ -19,7 +19,7 @@ app.factory('cast', ['$http', function($http) {
 					picture: "tiffany.jpg",
 					biotext: "",
 					height: 300},
-				{name: "Leland Bucahnon",
+				{name: "Leland J. Buchanan",
 					role: "Mike",
 					bio: "lelandbio.txt",
 					picture: "leland.jpg",
@@ -30,7 +30,7 @@ app.factory('cast', ['$http', function($http) {
 					bio: "edbio.txt",
 					picture: "ed.jpg",
 					biotext: "",
-					height: 350}],
+					height: 300}],
 		cached : false
 	}
 
