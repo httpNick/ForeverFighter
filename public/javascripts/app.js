@@ -68,15 +68,10 @@ app.config([
 		});
 
 		$stateProvider
-		.state('updates', {
-			url: '/updates',
-			templateUrl: '/updates.html',
-			controller: 'UpdateCtrl',
-			resolve: {
-				updatePromise : ['updates', function(updates) {
-					return updates.getUpdates();
-				}]
-			}
+		.state('trailer', {
+			url: '/trailer',
+			templateUrl: '/trailer.html',
+
 		});
 
 		$urlRouterProvider.otherwise('home');
