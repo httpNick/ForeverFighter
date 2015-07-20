@@ -167,6 +167,12 @@ app.config([
 		});
 
 		$stateProvider
+		.state('kickstarter', {
+			url: '/kickstarter',
+			templateUrl: '/kickstarter.html'
+		})
+
+		$stateProvider
 		.state('cast', {
 			url: '/cast',
 			templateUrl: '/cast.html',
