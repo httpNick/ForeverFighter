@@ -6,6 +6,7 @@ var async = require('async');
 var path = require('path');
 
 var castbiodata;
+var crewbiodata;
 
 var getFileData = function(filename, doneCallback) {
 	fs.readFile(filename, "utf8", function(err, data) {
@@ -38,6 +39,16 @@ router.get('/castdata/:data', function(req, res, next) {
 		res.json(castbiodata);
 	})
 });
+
+router.get('/crewdata/:data', function(req, res, next) {
+	crewbiodata = JSON.parse(req.params.data);
+	async.map(crewbiodata, getCastBios, function(err, results) {
+		for(x = 0; x < crewbiodata.length; x++) {
+			crewbiodata[x] = results[x]; 
+		}
+		res.json(crewbiodata);
+	})
+})
 
 router.get('/bio', function(req, res, next) {
 	var filePath = path.join(__dirname, 'frontpagebio.txt');

@@ -5,6 +5,11 @@ app.controller('CastCtrl', ['$scope', 'cast',
 		$scope.castdata = cast.people;
 	}]);
 
+app.controller('CrewCtrl', ['$scope', 'crew',
+	function($scope, crew) {
+		$scope.crewdata = crew.crewdata
+	}]);
+
 app.controller('MainCtrl', ['$scope', 'bio',
 	function($scope, bio) {
 		$scope.frontpagebio = bio.frontpagebio;
@@ -25,6 +30,26 @@ app.factory('story', ['$http', function($http) {
 		return $http.get('/storydata').success(function(data) {
 			o.text = data;
 		});
+	}
+
+	return o;
+}])
+
+app.factory('crew', ['$http', function($http) {
+
+	var o = {
+		crewdata: [{name: "Caleb M Guyll",
+					role: "Director of Photography",
+					bio: "calebbio.txt",
+					picture: "caleb.jpg",
+					biotext: "",
+					height: 300}]
+	}
+
+	o.getData = function() {
+		return $http.get('/crewdata/'+JSON.stringify(o.crewdata)).success(function(data) {
+			o.crewdata = data;
+		})
 	}
 
 	return o;
@@ -55,7 +80,7 @@ app.factory('cast', ['$http', function($http) {
 	}
 
 	o.getData = function() {
-		return $http.get('/castdata/'+JSON.stringify(o.people)).success(function(data) {
+		return $http.get('/crewdata/'+JSON.stringify(o.people)).success(function(data) {
 			o.people = data;
 		});
 	}
@@ -122,6 +147,23 @@ app.config([
 			url: '/trailer',
 			templateUrl: '/trailer.html'
 
+		});
+
+		$stateProvider
+		.state('crew', {
+			url: '/crew',
+			templateUrl: '/crew.html',
+			controller: 'CrewCtrl',
+			resolve: {
+				crewPromise: ['crew', function(crew) {
+					if (!crew.cached) {
+						crew.cached = true;
+						return crew.getData();
+					} else {
+						return;
+					}
+				}]
+			}
 		});
 
 		$stateProvider
