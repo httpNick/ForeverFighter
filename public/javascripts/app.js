@@ -4,12 +4,12 @@ app.controller('CastCtrl', ['$scope', 'cast',
 	function($scope, cast) {
 		$scope.castdata = cast.people;
 	}]);
-
+/**
 app.controller('CrewCtrl', ['$scope', 'crew',
 	function($scope, crew) {
 		$scope.crewdata = crew.crewdata
 	}]);
-
+*/
 app.controller('MainCtrl', ['$scope', 'bio',
 	function($scope, bio) {
 		$scope.frontpagebio = bio.frontpagebio;
@@ -149,7 +149,7 @@ app.config([
 
 		});
 
-		$stateProvider
+		/**$stateProvider
 		.state('crew', {
 			url: '/crew',
 			templateUrl: '/crew.html',
@@ -164,7 +164,7 @@ app.config([
 					}
 				}]
 			}
-		});
+		}); */
 
 		$stateProvider
 		.state('kickstarter', {
