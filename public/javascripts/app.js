@@ -149,23 +149,6 @@ app.config([
 
 		});
 
-		/**$stateProvider
-		.state('crew', {
-			url: '/crew',
-			templateUrl: '/crew.html',
-			controller: 'CrewCtrl',
-			resolve: {
-				crewPromise: ['crew', function(crew) {
-					if (!crew.cached) {
-						crew.cached = true;
-						return crew.getData();
-					} else {
-						return;
-					}
-				}]
-			}
-		}); */
-
 		$stateProvider
 		.state('kickstarter', {
 			url: '/kickstarter',

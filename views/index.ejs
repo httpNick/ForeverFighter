@@ -34,10 +34,9 @@
     <ul class="nav navbar-nav">
 	    <li><a href="#/story">Story</a></li>
 	    <li><a href="#/cast">Cast</a></li>
-	    <!--<li><a href="#/crew">Crew</a></li> -->
 	    <li><a href="#/trailer">Trailer</a></li>
 	    <li><a href="#/about">About Me</a></li>
-	    <li><button style="color: #2BDE73" class="btn btn-primary navbar-btn" onclick="location.href='#/kickstarter'">Kickstarter Campaign</button></li>
+	    <li><button style="color: #2BDE73" class="btn btn-primary navbar-btn" onclick="location.href='https://www.kickstarter.com/projects/2139423064/forever-fighter-a-movie-by-johnny-rayne'">Kickstarter Campaign</button></li>
 	    <li><div style = "padding-left:5px; padding-top:10px" class="fb-like navbar-btn" data-layout="button_count" data-href="https://www.facebook.com/pages/Forever-Fighter/870913306336748" data-action="like" data-show-faces="false" data-share="true" data-colorscheme="dark"></div></li>
     </ul>
 	<div class="container-fluid">
@@ -62,7 +61,7 @@
 
 <h3 class="text-right" style="margin-right: 100px"> Production status: <font color="white"><b>Pre-Production</b></font> </h3>
  <div class="jumbotron jumbotron-front" >
- <h1 class="text-center"><font color="white">TO DONATE AND HELP MAKE THIS FILM POSSIBLE PLEASE CHECK OUT THE <a href="#/kickstarter"> KICKSTARTER</a><br><br>Starting Aug. 7th - Sep. 5th</font></h1><br>
+ <h1 class="text-center"><font color="white">TO DONATE AND HELP MAKE THIS FILM POSSIBLE PLEASE CHECK OUT THE <a href="https://www.kickstarter.com/projects/2139423064/forever-fighter-a-movie-by-johnny-rayne"> KICKSTARTER</a><br></font><h1><br>
  <h2 class="text-center"><font color="white">We need to raise all $30,000 or nothing</font></h2>
  <br>
  <h2 class="text-center">The official site of <h2>
@@ -82,35 +81,6 @@
 	<div class="jumbotron jumbotron-front text-center">
 			<span style="color:white"><h1><b>TRAILER<br>COMING<br>SOON!!</b></h1></span>
 	</div>	
-</script>
-
-<script type="text/ng-template" id="/crew.html">
-	<div class="jumbotron jumbotron-front">
-		<div ng-repeat="crew in crewdata">
-			<div class="row middle">
-				<div class="col-lg-6 col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1 col-lg-offset-3">
-					<div class="jumbotron">
-						<div class="container">
-							<div class="span4">
-							<h1 class="text-center"><b>{{crew.role}}</b></h1>
-						<h2 class="text-center"><b>{{crew.name}}</b></h2>
-						<img class="imagetab" style="float:left" ng-src="/images/{{crew.picture}}" width="300" height="{{crew.height}}"/>
-						<div ng-bind-html="crew.biotext | sanitize"></div>
-	
-	</div>		
-		</div>
-			</div>
-				</div>
-					</div>
-						</div>
-						<div class="row middle">
-			<div class="col-lg-6 col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1 col-lg-offset-3"> 
-				<div class="jumbotron">
-					<h1 class="text-center"><b>MORE CREW TO BE ANNOUNCED!</b></h1>
-		</div>
-			</div>
-				</div>
-							</div>
 </script>
 
 <script type="text/ng-template" id="/cast.html">
