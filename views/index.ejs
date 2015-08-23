@@ -10,19 +10,19 @@
 	</style>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-    <script src="/javascripts/app.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+  <script src="/javascripts/app.js"></script>
 </head>
 
-	<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
-  fjs.parentNode.insertBefore(js, fjs);
+<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+  	var js, fjs = d.getElementsByTagName(s)[0];
+  	if (d.getElementById(id)) return;
+  	js = d.createElement(s); js.id = id;
+  	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+  	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
@@ -30,51 +30,47 @@
   <div class="container-fluid">
     <div class="navbar-header">
     	 <a class="navbar-brand" href="#/home">Forever Fighter</a>
-    	</div>
+    </div>
     <ul class="nav navbar-nav">
 	    <li><a href="#/story">Story</a></li>
 	    <li><a href="#/cast">Cast</a></li>
 	    <li><a href="#/trailer">Trailer</a></li>
 	    <li><a href="#/about">About Me</a></li>
-	    <li><button style="color: #2BDE73" class="btn btn-primary navbar-btn" onclick="location.href='https://www.kickstarter.com/projects/2139423064/forever-fighter-a-movie-by-johnny-rayne'">Kickstarter Campaign</button></li>
 	    <li><div style = "padding-left:5px; padding-top:10px" class="fb-like navbar-btn" data-layout="button_count" data-href="https://www.facebook.com/pages/Forever-Fighter/870913306336748" data-action="like" data-show-faces="false" data-share="true" data-colorscheme="dark"></div></li>
     </ul>
-	<div class="container-fluid">
-		<ul class="navbar-right" style="padding-top:18px">
-			<li><a href="http://instagram.com/foreverfightermovie?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a></li>
+		<div class="container-fluid">
+			<ul class="navbar-right" style="padding-top:18px">
+				<li><a href="http://instagram.com/foreverfightermovie?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a></li>
+		</div>
+			</ul>
+		</div>
 	</div>
-</ul>
-</div>
 </nav>
 
 <body>
-      	<ui-view></ui-view>
+  <ui-view></ui-view>
 </body>
 
 <footer style="padding-left: 30px">
-		<span class="footer-left">Website by Nick Duncan </span>
-
-<iframe src="https://ghbtns.com/github-btn.html?user=httpNick&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+	<span class="footer-left">Website by Nick Duncan </span>
+	<iframe src="https://ghbtns.com/github-btn.html?user=httpNick&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 </footer>
 
 <script type="text/ng-template" id="/home.html">
 
-<h3 class="text-right" style="margin-right: 100px"> Production status: <font color="white"><b>Pre-Production</b></font> </h3>
- <div class="jumbotron jumbotron-front" >
- <h1 class="text-center"><font color="white">TO DONATE AND HELP MAKE THIS FILM POSSIBLE PLEASE CHECK OUT THE <a href="https://www.kickstarter.com/projects/2139423064/forever-fighter-a-movie-by-johnny-rayne"> KICKSTARTER</a><br></font><h1><br>
- <h2 class="text-center"><font color="white">We need to raise all $30,000 or nothing</font></h2>
- <br>
- <h2 class="text-center">The official site of <h2>
-  <div class="panel-body text-center" style="background-color: pink">
-    <h1><br><b><FONT FACE="Lucida Console"><big>FOREVER<br>FIGHTER</big></FONT></h1></b><br><br><br><br>
-    <h3>A movie by Johnny Rayne</h3>
-    <br><br><br><br><br><br>
-    <h2><big><b><i>A Story of Family and Hope</i></b></big></h2>
-    <br>
-</div>
-         <br>
- </div>
- </div>
+	<h3 class="text-right" style="margin-right: 100px"> Production status: <font color="white"><b>Pre-Production</b></font> </h3>
+	<div class="jumbotron jumbotron-front">
+		<br>
+		<h2 class="text-center">The official site of </h2>
+  	<div class="panel-body text-center" style="background-color: pink">
+    	<h1><br><b><FONT FACE="Lucida Console"><big>FOREVER<br>FIGHTER</big></FONT></h1></b><br><br><br><br>
+    	<h3>A movie by Johnny Rayne</h3>
+    	<br><br><br><br><br><br>
+    	<h2><big><b><i>A Story of Family and Hope</i></b></big></h2>
+    	<br>
+		</div>
+  	<br>
+	</div>
 </script>
 
 <script type="text/ng-template" id="/trailer.html">
@@ -90,13 +86,13 @@
 		<div class="col-lg-6 col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1 col-lg-offset-3"> 
 				<div class="jumbotron">
 						<div class="container">
-						<div class="span4">
-						<h1 class="text-center"><b>{{cast.role}}</b></h1>
-						<h3 class="text-center">PLAYED BY</h3>
-						<h2 class="text-center"><b>{{cast.name}}</b></h2>
-						<img class="imagetab" style="float:left" ng-src="/images/{{cast.picture}}" width="300" height="{{cast.height}}"/>
-						<div ng-bind-html="cast.biotext | sanitize"></div>
-						</div>
+							<div class="span4">
+								<h1 class="text-center"><b>{{cast.role}}</b></h1>
+								<h3 class="text-center">PLAYED BY</h3>
+								<h2 class="text-center"><b>{{cast.name}}</b></h2>
+								<img class="imagetab" style="float:left" ng-src="/images/{{cast.picture}}" width="300" height="{{cast.height}}"/>
+								<div ng-bind-html="cast.biotext | sanitize"></div>
+							</div>
 						</div>
 				</div>
 			</div>
@@ -106,9 +102,9 @@
 			<div class="col-lg-6 col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1 col-lg-offset-3"> 
 				<div class="jumbotron">
 					<h1 class="text-center"><b>MORE CAST TO BE ANNOUNCED!</b></h1>
-		</div>
-			</div>
 				</div>
+			</div>
+		</div>
 	</div>
 
 </script>
@@ -131,23 +127,12 @@
 <script type="text/ng-template" id="/about.html">
 <h1 class="text-center"><b>Writer / Producer / Director / Actor</b></h1>
 <div class="jumbotron text-left">
-<div class="row">
-<div class="span4">
-<img class="imagetab" style="float:left" src="/images/large 90 pic.jpg"/>
-
-<div ng-bind-html="frontpagebio | sanitize"></div>
-</div>
-</div>
+	<div class="row">
+		<div class="span4">
+			<img class="imagetab" style="float:left" src="/images/large 90 pic.jpg"/>
+			<div ng-bind-html="frontpagebio | sanitize"></div>
+		</div>
+	</div>
 </div>	
-
-
-</div>
 </script>
-
-<script type="text/ng-template" id="/kickstarter.html">
-<div class="jumbotron jumbotron-front">
-	<span class="text-center" style="color:white"><h1><b>CHECK BACK!<br>KICKSTARTER WILL BE AVAILABLE AUGUST 7th<br></b></h1></span>
-</div>
-</script>
-
 </html>

@@ -4,12 +4,6 @@ app.controller('CastCtrl', ['$scope', 'cast',
 	function($scope, cast) {
 		$scope.castdata = cast.people;
 	}]);
-/**
-app.controller('CrewCtrl', ['$scope', 'crew',
-	function($scope, crew) {
-		$scope.crewdata = crew.crewdata
-	}]);
-*/
 app.controller('MainCtrl', ['$scope', 'bio',
 	function($scope, bio) {
 		$scope.frontpagebio = bio.frontpagebio;
@@ -35,26 +29,6 @@ app.factory('story', ['$http', function($http) {
 	return o;
 }])
 
-app.factory('crew', ['$http', function($http) {
-
-	var o = {
-		crewdata: [{name: "Caleb M Guyll",
-					role: "Director of Photography",
-					bio: "calebbio.txt",
-					picture: "caleb.jpg",
-					biotext: "",
-					height: 300}]
-	}
-
-	o.getData = function() {
-		return $http.get('/crewdata/'+JSON.stringify(o.crewdata)).success(function(data) {
-			o.crewdata = data;
-		})
-	}
-
-	return o;
-}])
-
 app.factory('cast', ['$http', function($http) {
 
 	var o = {
@@ -75,12 +49,18 @@ app.factory('cast', ['$http', function($http) {
 					bio: "edbio.txt",
 					picture: "ed.jpg",
 					biotext: "",
+					height: 300},
+				{name: "Darryl Small",
+					role: "Chris",
+					bio: "darrylbio.txt",
+					picture: "darryl.jpg",
+					biotext: "",
 					height: 300}],
 		cached : false
 	}
 
 	o.getData = function() {
-		return $http.get('/crewdata/'+JSON.stringify(o.people)).success(function(data) {
+		return $http.get('/castdata/'+JSON.stringify(o.people)).success(function(data) {
 			o.people = data;
 		});
 	}
@@ -148,12 +128,6 @@ app.config([
 			templateUrl: '/trailer.html'
 
 		});
-
-		$stateProvider
-		.state('kickstarter', {
-			url: '/kickstarter',
-			templateUrl: '/kickstarter.html'
-		})
 
 		$stateProvider
 		.state('cast', {
