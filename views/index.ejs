@@ -3,7 +3,7 @@
 <head>
 	<link rel="shortcut icon" href="/images/icon.jpg" />
 	<meta charset="UTF-8">
-	<title>Foever Fighter</title>
+	<title>Forever Fighter</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/sandstone/bootstrap.min.css" rel="stylesheet">
 	<style type="text/css">
    		body { background: pink; }
@@ -76,21 +76,21 @@
 <script type="text/ng-template" id="/trailer.html">
 	<div class="jumbotron jumbotron-front text-center">
 			<span style="color:white"><h1><b>TRAILER<br>COMING<br>SOON!!</b></h1></span>
-	</div>	
+	</div>
 </script>
 
 <script type="text/ng-template" id="/cast.html">
 	<div class="jumbotron jumbotron-front" >
 	<div ng-repeat="cast in castdata">
 	<div class="row middle">
-		<div class="col-lg-6 col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1 col-lg-offset-3"> 
+		<div class="col-lg-6 col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1 col-lg-offset-3">
 				<div class="jumbotron">
 						<div class="container">
 							<div class="span4">
 								<h1 class="text-center"><b>{{cast.role}}</b></h1>
 								<h3 class="text-center">PLAYED BY</h3>
 								<h2 class="text-center"><b>{{cast.name}}</b></h2>
-								<img class="imagetab" style="float:left" ng-src="/images/{{cast.picture}}" width="300" height="{{cast.height}}"/>
+								<img class="imagetab" style="float:left" ng-src="/images/{{cast.picture}}" width="{{cast.width}}" height="{{cast.height}}"/>
 								<div ng-bind-html="cast.biotext | sanitize"></div>
 							</div>
 						</div>
@@ -99,7 +99,7 @@
 	</div>
 	</div>
 		<div class="row middle">
-			<div class="col-lg-6 col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1 col-lg-offset-3"> 
+			<div class="col-lg-6 col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1 col-lg-offset-3">
 				<div class="jumbotron">
 					<h1 class="text-center"><b>MORE CAST TO BE ANNOUNCED!</b></h1>
 				</div>
@@ -133,6 +133,6 @@
 			<div ng-bind-html="frontpagebio | sanitize"></div>
 		</div>
 	</div>
-</div>	
+</div>
 </script>
 </html>
