@@ -32,41 +32,44 @@ app.factory('story', ['$http', function($http) {
 app.factory('cast', ['$http', function($http) {
 
 	var o = {
-		people: [{name: "Tiffany Nicole Thomas",
-					role: "Annie",
-					bio: "tiffanybio.txt",
-					picture: "tiffany.jpg",
-					biotext: "",
-					width: 300,
-					height: 300},
-				{name: "Leland J. Buchanan",
+		people: [
+				{
+					name: "Leland J. Buchanan",
 					role: "Mike",
 					bio: "lelandbio.txt",
 					picture: "leland.jpg",
 					biotext: "",
 					width: 300,
-					height: 300},
-				{name: "Ed Stone",
+					height: 300
+				},
+				{
+					name: "Ed Stone",
 					role: "Tony",
 					bio: "edbio.txt",
 					picture: "ed.jpg",
 					biotext: "",
 					width: 300,
-					height: 300},
-				{name: "Darryl Small",
+					height: 300
+				},
+				{
+					name: "Darryl Small",
 					role: "Chris",
 					bio: "darrylbio.txt",
 					picture: "darryl.jpg",
 					biotext: "",
 					width: 300,
-					height: 300},
-				{name: "Zoe Thompson",
+					height: 300
+				},
+				{
+					name: "Zoe Thompson",
 					role: "Granddaughter Maddie",
 					bio: "zoebio.txt",
 					picture: "zoe.jpg",
 					biotext: "",
 					width: 250,
-					height: 300}],
+					height: 300
+				}
+			],
 		cached : false
 	}
 
