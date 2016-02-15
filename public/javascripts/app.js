@@ -68,6 +68,15 @@ app.factory('cast', ['$http', function($http) {
 					biotext: "",
 					width: 250,
 					height: 300
+				},
+				{
+					name: "Larry Keaton",
+					role: "",
+					bio: "larrybio.txt",
+					picture: "larry.jpg",
+					biotext: "",
+					width : 350,
+					height: 300
 				}
 			],
 		cached : false
