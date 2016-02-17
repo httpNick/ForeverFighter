@@ -71,11 +71,19 @@ app.factory('cast', ['$http', function($http) {
 				},
 				{
 					name: "Larry Keaton",
-					role: "",
+					role: "Doc. Morrison",
 					bio: "larrybio.txt",
 					picture: "larry.jpg",
 					biotext: "",
 					width : 350,
+					height: 300
+				},
+				{
+					name: "Susan Nelson",
+					role: "Emily",
+					bio: "susanbio.txt",
+					picture: "susan.jpg",
+					width: 300,
 					height: 300
 				}
 			],
