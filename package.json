@@ -4,8 +4,7 @@
   "description": "Web app for Andi's Movie",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "postinstall": "bower install"
+    "start": "node server.js"
   },
   "dependencies": {
     "pg": "4.x",
