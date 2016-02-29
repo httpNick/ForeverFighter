@@ -8,7 +8,7 @@ app.controller('CastCtrl', ['$scope', 'cast',
 	}]);
 
 app.controller('PhotoCtrl', ['$scope',
-	($scope) => {
+	function($scope) {
 
 		$scope.photos = [
 			"IMG_1855.JPG",
