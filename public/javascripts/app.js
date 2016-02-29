@@ -47,7 +47,7 @@ app.controller('PhotoCtrl', ['$scope',
 
 		// show prev image
 		$scope.showPrev = function () {
-			$scope._index = ($scope._index > 0) ? --$scope._Index : $scope.photos.length - 1;
+			$scope._index = ($scope._index > 0) ? --$scope._index : $scope.photos.length - 1;
 		};
 
 		// show next image
