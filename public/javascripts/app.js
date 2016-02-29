@@ -39,7 +39,27 @@ app.controller('PhotoCtrl', ['$scope',
 			"IMG_1956.PNG"
 		];
 
-		$scope.index = 0;
+		$scope._index = 0;
+
+		$scope.isActive = function (index) {
+			return $scope._index === index;
+		};
+
+		// show prev image
+		$scope.showPrev = function () {
+			$scope._index = ($scope._index > 0) ? --$scope._Index : $scope.photos.length - 1;
+		};
+
+		// show next image
+		$scope.showNext = function () {
+			$scope._index = ($scope._index < $scope.photos.length - 1) ? ++$scope._index : 0;
+		};
+
+		// show a certain image
+		$scope.showPhoto = function (index) {
+			$scope._index = index;
+		};
+
 
 	}]);
 

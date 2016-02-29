@@ -38,7 +38,7 @@
         <li><a href="#/story">Story</a></li>
         <li><a href="#/cast">Cast</a></li>
         <li><a href="#/trailer">Trailer</a></li>
-       <!-- <li><a href="#/photos">Production Photos</a></li> -->
+        <li><a href="#/photos">Production Photos</a></li>
         <li><a href="#/about">About Me</a></li>
         <li><div style = "padding-left:5px; padding-top:10px" class="fb-like navbar-btn" data-layout="button_count" data-href="https://www.facebook.com/pages/Forever-Fighter/870913306336748" data-action="like" data-show-faces="false" data-share="true" data-colorscheme="dark"></div></li>
     </ul>
@@ -47,8 +47,7 @@
                 <li><a href="http://instagram.com/foreverfightermovie?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a></li>
             </ul>
         </div>
-        </div>
-    </div>
+  </div>
 </nav>
 
 <body>
@@ -138,4 +137,31 @@
     </div>
 </div>
 </script>
+
+<script type="text/ng-template" id="/photogallery.html">
+    <div class="jumbotron jumbotron-front" >
+        <div class="col-lg-10 col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1 col-lg-offset-1">
+            <div class="jumbotron">
+                <!-- slider container -->
+                <div class="container slider">
+
+                    <!-- enumerate all photos -->
+                        <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="/images/productionpics/{{photo}}" />
+
+                    <!-- prev / next controls -->
+                    <a class="arrow prev" href="#" ng-click="showPrev()"></a>
+                    <a class="arrow next" href="#" ng-click="showNext()"></a>
+                    <!-- extra navigation controls -->
+                    <ul class="photo-nav">
+                        <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+                            <img src="/images/productionpics/{{photo}}" ng-click="showPhoto($index);" />
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
 </html>
