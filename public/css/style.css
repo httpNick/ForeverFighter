@@ -21,6 +21,11 @@ a { color : #2BDE73 }
     overflow: hidden;
 }
 
+.front-splash-poster-div {
+  background-image: url("/images/front_splash_poster.jpg");
+  background-size: contain;
+}
+
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
@@ -30,7 +35,7 @@ a { color : #2BDE73 }
 }
 
 .panel-body {
-	margin-left: 250px;
+	margin-left: 300px;
 	margin-right: 250px;
 	word-wrap:break-word;
 }

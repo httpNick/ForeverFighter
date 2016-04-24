@@ -149,6 +149,22 @@ app.factory('cast', ['$http', function($http) {
 					picture: "susan.jpg",
 					width: 300,
 					height: 300
+				},
+				{
+					name: "Mary Bruenn",
+					role: "Annie",
+					bio: "marybio.txt",
+					picture: "mary.jpeg",
+					width: 250,
+					height: 300
+				},
+				{
+					name: "Dennis Moore",
+					role: "Danny",
+					bio: "dennisbio.txt",
+					picture: "dennis.jpg",
+					width: 400,
+					height: 300
 				}
 			],
 		cached : false
