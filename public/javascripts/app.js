@@ -231,13 +231,6 @@ app.config([
 					return story.getStory();
 				}]
 			}
-		})
-
-		$stateProvider
-		.state('trailer', {
-			url: '/trailer',
-			templateUrl: '/trailer.html'
-
 		});
 
 		$stateProvider
