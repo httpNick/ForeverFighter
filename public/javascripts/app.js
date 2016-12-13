@@ -210,6 +210,12 @@ app.config([
 		});
 
 		$stateProvider
+			.state('trailer', {
+				url: '/trailer',
+				templateUrl: '/trailer.html',
+			});
+
+		$stateProvider
 		.state('about', {
 			url: '/about',
 			templateUrl: '/about.html',
@@ -231,13 +237,6 @@ app.config([
 					return story.getStory();
 				}]
 			}
-		})
-
-		$stateProvider
-		.state('trailer', {
-			url: '/trailer',
-			templateUrl: '/trailer.html'
-
 		});
 
 		$stateProvider
