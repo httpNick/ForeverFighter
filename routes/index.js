@@ -53,6 +53,6 @@ router.get('/storydata', function(req, res, next) {
 	async.map([filePath], getFileData, function(err, results) {
 		res.json(results);
 	})
-})
+});
 
 module.exports = router;

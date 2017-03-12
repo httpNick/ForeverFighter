@@ -216,50 +216,56 @@ app.config([
 			});
 
 		$stateProvider
-		.state('about', {
-			url: '/about',
-			templateUrl: '/about.html',
-			controller: 'MainCtrl',
-			resolve: {
-				bioPromise : ['bio', function(bio) {
-					return bio.getFrontPageBio();
-				}]
-			}
-		});
+			.state('about', {
+				url: '/about',
+				templateUrl: '/about.html',
+				controller: 'MainCtrl',
+				resolve: {
+					bioPromise : ['bio', function(bio) {
+						return bio.getFrontPageBio();
+					}]
+				}
+			});
 
 		$stateProvider
-		.state('story', {
-			url: '/story',
-			templateUrl: '/story.html',
-			controller: 'StoryCtrl',
-			resolve: {
-				storyPromise : ['story', function(story) {
-					return story.getStory();
-				}]
-			}
-		});
+			.state('story', {
+				url: '/story',
+				templateUrl: '/story.html',
+				controller: 'StoryCtrl',
+				resolve: {
+					storyPromise : ['story', function(story) {
+						return story.getStory();
+					}]
+				}
+			});
 
 		$stateProvider
-		.state('cast', {
-			url: '/cast',
-			templateUrl: '/cast.html',
-			controller: 'CastCtrl',
-			resolve: {
-				castPromise : ['cast', function(cast) {
-					if (!cast.cached) {
-						cast.cached = true;
-						return cast.getData();
-					}
-				}]
-			}
-		});
+			.state('cast', {
+				url: '/cast',
+				templateUrl: '/cast.html',
+				controller: 'CastCtrl',
+				resolve: {
+					castPromise : ['cast', function(cast) {
+						if (!cast.cached) {
+							cast.cached = true;
+							return cast.getData();
+						}
+					}]
+				}
+			});
 
 		$stateProvider
-		.state('production photos', {
-			url: '/photos',
-			templateUrl: '/photogallery.html',
-			controller: 'PhotoCtrl'
-		});
+			.state('production photos', {
+				url: '/photos',
+				templateUrl: '/photogallery.html',
+				controller: 'PhotoCtrl'
+			});
+
+		$stateProvider
+			.state('contact', {
+				url: '/contact',
+				templateUrl: '/contact.html',
+			});
 
 		$urlRouterProvider.otherwise('home');
 	}]);
