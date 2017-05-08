@@ -210,9 +210,21 @@ app.config([
 		});
 
 		$stateProvider
-			.state('trailer', {
-				url: '/trailer',
-				templateUrl: '/trailer.html',
+			.state('trailers', {
+				url: '/trailers',
+				templateUrl: '/trailers.html',
+			});
+
+		$stateProvider
+			.state('sneak peaks', {
+				url: '/sneak-peaks',
+				templateUrl: '/sneak-peaks.html',
+			});
+
+		$stateProvider
+			.state('interviews', {
+				url: '/interviews',
+				templateUrl: '/interviews.html',
 			});
 
 		$stateProvider

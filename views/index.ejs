@@ -35,11 +35,13 @@
          <a class="navbar-brand" href="#/home">Forever Fighter</a>
     </div>
     <ul class="nav navbar-nav">
-        <li><a href="#/story">Story</a></li>
-        <li><a href="#/cast">Cast</a></li>
-        <li><a href="#/trailer">Trailer</a></li>
+        <!--<li><a href="#/story">Story</a></li>-->
+        <li><a href="#/trailers">Trailers</a></li>
+        <li><a href="#/sneak-peaks">Sneak Peaks</a></li>
+        <li><a href="#/interviews">Interviews</a></li>
         <li><a href="#/photos">Production Photos</a></li>
-        <li><a href="#/about">About Me</a></li>
+        <li><a href="#/cast">Cast</a></li>
+        <!--<li><a href="#/about">About Me</a></li>-->
         <li><a href="#/contact">Contact</a></li>
         <li><div style = "padding-left:5px; padding-top:10px" class="fb-like navbar-btn" data-layout="button_count" data-href="https://www.facebook.com/pages/Forever-Fighter/870913306336748" data-action="like" data-show-faces="false" data-share="true" data-colorscheme="dark"></div></li>
     </ul>
@@ -57,20 +59,34 @@
 
 <script type="text/ng-template" id="/home.html">
 
-    <h3 class="text-right" style="margin-right: 100px"> Production status: <font color="white"><b>Post-Production</b></font> </h3>
     <div class="jumbotron jumbotron-front">
-        <br>
-        <h2 class="text-center">Official Site of</h2>
-        <br>
-        <div class="text-center">
-            <img src="/images/front_splash_poster.jpg" alt="front poster image." height="780" width="540">
+        <div class="center-row">
+            <!--<img src="/images/front_splash_poster.jpg" alt="front poster image." height="780" width="540">-->
+            <img src="/images/poster-2.jpg" alt="poster 2" height="640" width="480">
+            <img src="/images/poster-1.jpg" alt="poster 1" height="640" width="480">
         </div>
     </div>
 </script>
 
-<script type="text/ng-template" id="/trailer.html">
+<script type="text/ng-template" id="/trailers.html">
     <div class="jumbotron jumbotron-front text-center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/nq_B4CAAY8U" frameborder="0" allowfullscreen></iframe>
+        <div class="space-between-row">
+            <iframe width="400" height="315" src="https://www.youtube.com/embed/nq_B4CAAY8U" frameborder="0" allowfullscreen></iframe>
+            <iframe width="400" height="315" src="https://www.youtube.com/embed/MJwjc7hWsJo" frameborder="0" allowfullscreen></iframe>
+            <iframe width="400" height="315" src="https://www.youtube.com/embed/YwcxAgDXKMY" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="/sneak-peaks.html">
+    <div class="jumbotron jumbotron-front">
+        <div class="space-around-row">
+            <div class="space-around-column">
+                <span class="self-center mild-language-label">Mild Language</span>
+                <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/MTHIm0Omz0I" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/frB47ykywRU" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 </script>
 
@@ -93,6 +109,36 @@
             </div>
     </div>
     </div>
+    </div>
+</script>
+
+
+<script type="text/ng-template" id="/interviews.html">
+    <div class="jumbotron jumbotron-front" style="display: flex">
+        <div class="fifteen-percent"></div>
+        <div class="flex-grid">
+            <div class="interview-box">
+                <span>Johnny Rayne</span>
+                <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/BJTyQNjZnRI" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="interview-box">
+                <span>Mary Bruenn</span>
+                <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/yZ2fZS4fu18" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="interview-box">
+                <span>Susan Reeves Nelson</span>
+                <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/zlM8u0c8L3Y" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="interview-box">
+                <span>Dennis Moore</span>
+                <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/-5uXa6pQIKg" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="interview-box">
+                <span>Larry Keaton</span>
+                <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/XNL-lkM5E6o"" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="fifteen-percent"></div>
     </div>
 </script>
 
