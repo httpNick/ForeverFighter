@@ -228,15 +228,9 @@ app.config([
 			});
 
 		$stateProvider
-			.state('about', {
-				url: '/about',
-				templateUrl: '/about.html',
-				controller: 'MainCtrl',
-				resolve: {
-					bioPromise : ['bio', function(bio) {
-						return bio.getFrontPageBio();
-					}]
-				}
+			.state('making-of', {
+				url: '/making-of',
+				templateUrl: '/making-of.html',
 			});
 
 		$stateProvider

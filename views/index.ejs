@@ -39,9 +39,9 @@
         <li><a href="#/trailers">Trailers</a></li>
         <li><a href="#/sneak-peaks">Sneak Peaks</a></li>
         <li><a href="#/interviews">Interviews</a></li>
+        <li><a href="#/making-of">Making Of</a></li>
         <li><a href="#/photos">Production Photos</a></li>
         <li><a href="#/cast">Cast</a></li>
-        <!--<li><a href="#/about">About Me</a></li>-->
         <li><a href="#/contact">Contact</a></li>
         <li><div style = "padding-left:5px; padding-top:10px" class="fb-like navbar-btn" data-layout="button_count" data-href="https://www.facebook.com/pages/Forever-Fighter/870913306336748" data-action="like" data-show-faces="false" data-share="true" data-colorscheme="dark"></div></li>
     </ul>
@@ -70,7 +70,7 @@
 
 <script type="text/ng-template" id="/trailers.html">
     <div class="jumbotron jumbotron-front text-center">
-        <div class="space-between-row">
+        <div class="center-column video-margin">
             <iframe width="400" height="315" src="https://www.youtube.com/embed/nq_B4CAAY8U" frameborder="0" allowfullscreen></iframe>
             <iframe width="400" height="315" src="https://www.youtube.com/embed/MJwjc7hWsJo" frameborder="0" allowfullscreen></iframe>
             <iframe width="400" height="315" src="https://www.youtube.com/embed/YwcxAgDXKMY" frameborder="0" allowfullscreen></iframe>
@@ -80,12 +80,12 @@
 
 <script type="text/ng-template" id="/sneak-peaks.html">
     <div class="jumbotron jumbotron-front">
-        <div class="space-around-row">
-            <div class="space-around-column">
+        <div class="center-column">
+            <div class="center-column">
                 <span class="self-center mild-language-label">Mild Language</span>
                 <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/MTHIm0Omz0I" frameborder="0" allowfullscreen></iframe>
             </div>
-            <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/frB47ykywRU" frameborder="0" allowfullscreen></iframe>
+            <iframe width="400" height="315" style="margin-top: 100px" src="https://www.youtube.com/embed/frB47ykywRU" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 </script>
@@ -114,9 +114,8 @@
 
 
 <script type="text/ng-template" id="/interviews.html">
-    <div class="jumbotron jumbotron-front" style="display: flex">
-        <div class="fifteen-percent"></div>
-        <div class="flex-grid">
+    <div class="jumbotron jumbotron-front" style="display: flex; justify-content: center">
+        <div class="center-column">
             <div class="interview-box">
                 <span>Johnny Rayne</span>
                 <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/BJTyQNjZnRI" frameborder="0" allowfullscreen></iframe>
@@ -135,11 +134,18 @@
             </div>
             <div class="interview-box">
                 <span>Larry Keaton</span>
-                <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/XNL-lkM5E6o"" frameborder="0" allowfullscreen></iframe>
+                <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/XNL-lkM5E6o" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
-        <div class="fifteen-percent"></div>
     </div>
+</script>
+
+<script type="text/ng-template" id="/making-of.html">
+
+    <div class="jumbotron jumbotron-front text-center">
+        <iframe class="self-end" width="400" height="315" src="https://www.youtube.com/embed/znnH175a05M" frameborder="0" allowfullscreen></iframe>
+    </div>
+
 </script>
 
 <script type="text/ng-template" id="/story.html">
