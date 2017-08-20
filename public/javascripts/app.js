@@ -116,15 +116,6 @@ app.factory('cast', ['$http', function($http) {
 					height: 300
 				},
 				{
-					name: "Darryl Small",
-					role: "Chris",
-					bio: "darrylbio.txt",
-					picture: "darryl.jpg",
-					biotext: "",
-					width: 300,
-					height: 300
-				},
-				{
 					name: "Zoe Thompson",
 					role: "Granddaughter Maddie",
 					bio: "zoebio.txt",
